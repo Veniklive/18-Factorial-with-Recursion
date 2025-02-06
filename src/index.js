@@ -1,14 +1,13 @@
-/** Calculates factorial with recursionы
- * @returns {Number} Calculated factorial.
+/** Calculates factorial with recursion
+ * @param {Number} a - Number for which the factorial is calculated.
+ * @returns {Number} Number to calculate factorial.
  */
 
-function calcFactorial(a, i = 1, factorial = 1) {
-  if (i !== a) {
-    i++;
-    factorial *= i;
-    return calcFactorial(a, i, factorial);
+function calcFactorial(a) {
+  if (a === 0) {
+    return 1;
   }
-  return factorial;
+  return a * calcFactorial(a - 1);
 }
 
 console.log(calcFactorial(10));
