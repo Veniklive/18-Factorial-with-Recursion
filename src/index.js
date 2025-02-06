@@ -3,11 +3,8 @@
  * @returns {Number} Number to calculate factorial.
  */
 
-function calcFactorial(a) {
-  if (a === 0) {
-    return 1;
-  }
-  return a * calcFactorial(a - 1);
-}
+const calcFactorial = (a) => {
+  return a === 0 ? 1 : a * calcFactorial(a - 1);
+};
 
-console.log(calcFactorial(10));
+console.log(calcFactorial(10)); // 3628800
