@@ -3,19 +3,12 @@
  * @returns {Number} Number to calculate factorial.
  */
 
-function calcFactorialWithCheck(a) {
-  if (!Number.isInteger(a)) {
-    return "Not a number.";
-  }
-  if (a < 0) {
-    return "The factorial for negative numbers is not defined.";
-  }
-  const calcFactorial = (a) => {
-    return a === 0 ? 1 : a * calcFactorial(a - 1);
-  };
-  return calcFactorial(a);
+function calcFactorial(a) {
+  if (!Number.isInteger(a)) return "Not a number.";
+  if (a < 0) return "The factorial for negative numbers is not defined.";
+  return a === 0 ? 1 : a * calcFactorial(a - 1);
 }
 
-console.log(calcFactorialWithCheck(10)); // 3628800
-console.log(calcFactorialWithCheck("Test")); // Not a number.
-console.log(calcFactorialWithCheck(-10)); // The factorial for negative numbers is not defined.
+console.log(calcFactorial(10)); // 3628800
+console.log(calcFactorial("Test")); // Not a number.
+console.log(calcFactorial(-10)); // The factorial for negative numbers is not defined.
